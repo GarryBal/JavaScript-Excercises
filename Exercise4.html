@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function reverse(s) {
+	//var s = document.getElementById("fnum").value;
+	var r = s.split("").reverse().join("");
+	document.getElementById("result").innerHTML = r;
+}
+</script>
+</head>
+<body onload="calculate()">
+
+<h3>Reverse a string:</h3>
+
+String: &nbsp;<input type="text" id="fnum"> <br><br>
+
+<input type="button" id="mul" value="Reverse" onclick="reverse(document.getElementById('fnum').value)">
+
+<br><br>
+Reverse of given string is:
+<p id="result"></p>
+
+</body>
+</html>

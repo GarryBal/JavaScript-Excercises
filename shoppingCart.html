@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Shopping Application</h2> 
+
+<h3>Personal Information Page - Personal Details:</h3>
+
+Firstname: <b id="fname"></b><br>
+Lastname: <b id="lname"></b><br>
+Age: <b id="age"></b>
+
+<h3>Cart Contains:</h3>
+
+<div id="fcart"></div>
+<br>
+<input type="button" name="Add" Value="ADD ITEM" onClick="add()">
+<input type="button" name="Add" Value="DELETE ITEM" onClick="del()">
+
+<script>
+var person = {firstName:"John", lastName:"Doe", age:46}; 
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+document.getElementById("fname").innerHTML = person.firstName;
+document.getElementById("lname").innerHTML = person.lastName;
+document.getElementById("age").innerHTML = person.age;
+document.getElementById("fcart").innerHTML = fruits.join(" - ");
+
+function add() {
+	fruits.push("Kiwi");
+	document.getElementById("fcart").innerHTML = fruits.join(" - ");
+}
+
+function del() {
+	fruits.pop();
+	document.getElementById("fcart").innerHTML = fruits.join(" - ");
+}
+
+</script>
+
+</body>
+</html>

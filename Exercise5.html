@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function check(s) {
+	var str=s;
+	var ss = str.split(""); 
+	var newTxt = "";
+	for (var i in ss) {
+		
+		if(str.charAt(i) === 'z') {
+			newTxt = newTxt.concat('a');
+		} else {
+	 		newTxt = newTxt.concat(String.fromCharCode(str.charAt(i).charCodeAt(0)+1));
+		}
+	} 
+	document.getElementById("result").innerHTML = newTxt;
+}
+</script>
+</head>
+<body>
+
+<h3>Replace every character in a given string with the character following it in the alphabet</h3>
+
+String: &nbsp;<input type="text" id="fnum"> <br><br>
+
+<input type="button" value="Test" onclick="check(document.getElementById('fnum').value)">
+
+<br><br>
+Reverse is:
+<p id="result"></p>
+
+</body>
+</html>

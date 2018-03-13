@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validate() {
+	var a = document.getElementById("fnum").value;
+	var b = document.getElementById("snum").value;
+	var c = document.getElementById("tnum").value;
+	var flag = "No";
+	if((a > 50 && a<99) || (b > 50 && b<99) || (c > 50 && c<99))
+		flag = "Yes";
+	
+	document.getElementById("result").innerHTML = flag;
+}
+
+</script>
+</head>
+<body onload="calculate()">
+
+<h3>Check Integer Range between 50..99</h3>
+
+1st Number: &nbsp;<input type="text" id="fnum"> <br>
+2nd Number: <input type="text" id="snum"> <br>
+3rd Number: &nbsp;<input type="text" id="tnum"> <br><br>
+
+<input type="button" id="mul" value="Validate" onclick="validate()">
+
+<br><br>
+Number in range 50..99 is :
+<p id="result"></p>
+
+</body>
+</html>

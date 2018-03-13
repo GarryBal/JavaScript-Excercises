@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function check(s) {
+	//var s = document.getElementById("fnum").value;
+	var flag = false;
+	if(s.startsWith("Java"))
+		flag = true;
+	document.getElementById("result").innerHTML = flag;
+}
+</script>
+</head>
+<body onload="calculate()">
+
+<h3>Validate if string starts with java:</h3>
+
+String: &nbsp;<input type="text" id="fnum"> <br><br>
+
+<input type="button" id="mul" value="Test" onclick="check(document.getElementById('fnum').value)">
+
+<br><br>
+Reverse is:
+<p id="result"></p>
+
+</body>
+</html>
